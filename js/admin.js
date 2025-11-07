@@ -77,8 +77,6 @@
 
   function sendReveal(i){
     broadcast({type:'reveal', index: i});
-    // play a local reveal sound on admin so operator hears feedback (requires user gesture first)
-    try{ playRevealSound(); }catch(e){}
   }
 
   // strikes handling in admin (local optimistic counter + BC messages)
@@ -92,7 +90,6 @@
     updateAdminStrikes();
     // notify public to increment strikes; public will show overlay
     broadcast({type:'strikeInc'});
-    try{ playStrikeSound(); }catch(e){}
   }
 
   function undoStrike(){
