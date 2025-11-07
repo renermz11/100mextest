@@ -41,7 +41,7 @@
       questionEl.textContent = state.question || '(Sin pregunta)';
       questionEl.classList.remove('hidden-question');
     } else {
-      questionEl.textContent = 'Pregunta oculta';
+      questionEl.textContent = '**************************';
       questionEl.classList.add('hidden-question');
     }
     answersEl.innerHTML = '';
@@ -207,4 +207,5 @@
 
   // show placeholder if no init arrives quickly
   render();
+
 })();
