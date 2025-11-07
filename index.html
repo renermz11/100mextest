@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>100 Mex Dijeron — Pantalla pública</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <!-- corner strike badges (small X indicators) -->
+    <div id="cornerStrikes" class="corner-strikes" aria-hidden="true">
+      <span class="strike-badge" data-index="1">✖</span>
+      <span class="strike-badge" data-index="2">✖</span>
+      <span class="strike-badge" data-index="3">✖</span>
+    </div>
+
+    <section class="hero">
+      <div class="brand">
+        <div class="logo">100</div>
+        <div class="brand-text">
+          <div class="brand-title">100 Boraaches Dijeren</div>
+          <div class="brand-sub">Respuestas populares — ¡Adivina y gana puntos!</div>
+        </div>
+      </div>
+      <h1 id="question" class="question">100 Boraaches Dijeren</h1>
+    </section>
+
+    <div id="answers" class="answers"></div>
+    <!-- Strike overlay and counter -->
+    
+    <div id="strikeOverlay" class="strike-overlay hidden" aria-hidden="true">✖</div>
+    <div class="footer">Conéctate con la vista admin en la misma carpeta y usa los controles para revelar respuestas.</div>
+  </main>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  <script src="js/public.js"></script>
+</body>
+</html>

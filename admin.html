@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>100 Mex Dijeron — Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container admin">
+    <h1>Vista admin</h1>
+    <form id="initForm">
+      <label>Pregunta</label>
+      <input id="questionInput" type="text" placeholder="Escribe la pregunta" required />
+      <label>Respuestas (una por línea, primero la más alta)</label>
+      <textarea id="answersInput" placeholder="Respuesta1\nRespuesta2\n..." rows="6" required></textarea>
+      <div class="row">
+        <button type="submit">Enviar a pantalla</button>
+        <button id="resetBtn" type="button">Reset</button>
+        <button id="revealAllBtn" type="button">Revelar todo</button>
+      </div>
+      <div class="row" style="margin-top:8px;">
+        <button id="strikeBtn" type="button">Equis (Strike)</button>
+        <button id="undoStrikeBtn" type="button">Deshacer strike</button>
+        <button id="resetStrikesBtn" type="button">Reset strikes</button>
+      </div>
+    </form>
+    <hr />
+    <h2>Revelar individual</h2>
+    <ul id="answerList" class="answer-list"></ul>
+  <div id="adminStrikes" style="margin-top:12px;opacity:0.9">Strikes: 0 / 3</div>
+    <div class="notes">
+      Atajos: presiona un número (1..9) para revelar la respuesta correspondiente. "A" = revelar todo, "R" = reset.
+    </div>
+  </main>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
