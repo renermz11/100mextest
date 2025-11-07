@@ -30,6 +30,10 @@
     <!-- Strike overlay and counter -->
     
     <div id="strikeOverlay" class="strike-overlay hidden" aria-hidden="true">✖</div>
+    <!-- Audio unlock overlay: many TV browsers block autoplay; require a user gesture -->
+    <div id="audioUnlock" class="audio-unlock">
+      <button id="enableAudioBtn" class="enable-audio-btn">Toca la pantalla para habilitar sonido</button>
+    </div>
     <div class="footer">Conéctate con la vista admin en la misma carpeta y usa los controles para revelar respuestas.</div>
   </main>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
